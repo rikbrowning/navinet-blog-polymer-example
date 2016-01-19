@@ -1,0 +1,25 @@
+<link rel="import" href="../polymer/polymer.html">
+<!--
+# Task Notification
+
+Displays a count of the tasks.
+
+@demo demo/index.html
+-->
+<dom-module id="task-notification">
+    <template>
+        <h1>You have <span>{{tasks.length}}</span> tasks.</h1>
+    </template>
+    <script>
+        Polymer({
+            is: "task-notification",
+            properties: {  
+                //Array of tasks whose count is displayed.
+                tasks: {
+                    type: Array,
+                    notify: true
+                }
+            }
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,28 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "authors": [
+    "NaviNet"
+  ],
+  "description": "An element for displaying tasks.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "tasks"
+  ],
+  "main": "task-manager.html",
+  "homepage": "https://github.com/rikbrowning/navinet-blog-polymer-example/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  }
+}

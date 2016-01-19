@@ -1,0 +1,30 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-ajax/iron-ajax.html">
+<link rel="import" href="task-list.html">
+<link rel="import" href="task-notification.html">
+<!--
+# Task Manager
+
+Contains a `task-notification` area and a `task-list`.
+
+@demo demo/index.html
+-->
+<dom-module id="task-manager">
+    <template>
+        <iron-ajax url="{{url}}" method="GET" last-response="{{tasks}}" auto></iron-ajax>
+        <task-notification tasks="{{tasks}}"></task-notification>
+        <task-list tasks="{{tasks}}"></task-list>
+    </template>
+    <script>
+        Polymer({
+            is: "task-manager",
+            properties: {
+                //Url from which to load the tasks.
+                url: {
+                    type: String,
+                    value: "../task.json"
+                }
+            }            
+        });
+    </script>
+</dom-module>
