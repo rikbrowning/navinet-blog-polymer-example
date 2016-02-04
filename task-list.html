@@ -8,6 +8,32 @@ Displays a list of tasks that are defined in property tasks.
 -->
 <dom-module id="task-list">
     <template>
+        <style>
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+            
+            li {
+                list-style: none;
+                border: 1px solid #e5e5e5;
+                border-radius:2px;
+                background-color: #fefefe;
+                padding: 0px 10px;
+                margin: 10px 5px;
+                max-width: 250px;
+                transition-property: all;
+                transition-duration: 200ms;
+                transition-timing-function: ease-in;
+                
+            }
+            li:hover{
+                cursor: pointer;
+                border-color:#b3d4fc;
+                transform:scale(1.04);
+                
+            }
+        </style>
         <ul>
             <template is="dom-repeat" items="{{tasks}}">
                 <li>
@@ -20,7 +46,7 @@ Displays a list of tasks that are defined in property tasks.
     <script>
         Polymer({
             is: "task-list",
-            properties: {   
+            properties: {
                 //Array of tasks that are displayed in the list.
                 tasks: {
                     type: Array,
